@@ -21,13 +21,13 @@ public class RedisController {
 	private StringRedisTemplate redisTemplate;
 
 	@RequestMapping("/redis/set")
-	public String set(String key, String value) {
+	public String set() {
 		RedisCallback<Boolean> redisCallback = connection -> {
 			connection.set("foot".getBytes(), "woody".getBytes());
 			return true;
 		};
 		redisTemplate.execute(redisCallback);
-		return null;
+		return "success";
 	}
 
 	@RequestMapping("/redis/get")

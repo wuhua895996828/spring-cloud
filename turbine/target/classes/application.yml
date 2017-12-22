@@ -6,7 +6,7 @@ security.basic.enabled: false
 turbine:
   aggregator:
     clusterConfig: default
-    appConfig: service-hi,service-feign
+    appConfig: service-client,service-feign
     clusterNameExpression: new String("default")
 
 eureka:
